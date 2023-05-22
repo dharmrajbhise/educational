@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colorful Educational Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      color: #343a40;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      background-color: #17a2b8;
+      color: #ffffff;
+    }
+
+    .navbar-brand {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .navbar-nav .nav-link {
+      color: #ffffff;
+    }
+
+    .jumbotron {
+      background-color: #ffffff;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 30px;
+    }
+
+    .btn-primary {
+      background-color: #17a2b8;
+      border-color: #17a2b8;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background-color: #138496;
+      border-color: #117a8b;
+    }
+
+    .service {
+      background-color: #ffffff;
+      padding: 30px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .service-icon {
+      font-size: 48px;
+      color: #17a2b8;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .service-title {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .service-description {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .service:hover {
+      transform: scale(1.05);
+    }
+
+    .service:hover .service-icon {
+      transform: rotate(10deg);
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">Educational Services</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="jumbotron">
+    <h1>Enhance Your Knowledge with Educational Services</h1>
+    <p>Explore our wide range of courses and improve your skills.</p>
+    <a href="#" class="btn btn-primary btn-lg">Learn More</a>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="service" onmouseover="rotateIcon(this)" onmouseout="resetIcon(this)">
+          <i class="bi bi-pencil-square service-icon"></i>
+          <h2 class="service-title">Online Courses</h2>
+          <p class="service-description">Learn at your own pace with our online courses.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="service" onmouseover="rotateIcon(this)" onmouseout="resetIcon(this)">
+          <i class="bi bi-laptop service-icon"></i>
+          <h2 class="service-title">Digital Learning</h2>
+          <p class="service-description">Experience interactive learning through digital platforms.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="service" onmouseover="rotateIcon(this)" onmouseout="resetIcon(this)">
+          <i class="bi bi-people-fill service-icon"></i>
+          <h2 class="service-title">Expert Instructors</h2>
+          <p class="service-description">Learn from industry experts with real-world experience.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function rotateIcon(element) {
+      element.querySelector(".service-icon").style.transform = "rotate(10deg)";
+    }
+
+    function resetIcon(element) {
+      element.querySelector(".service-icon").style.transform = "rotate(0deg)";
+    }
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
